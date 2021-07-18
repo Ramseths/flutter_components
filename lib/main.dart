@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: getApplicationRoutes(),
       onGenerateRoute: (settings){
-        print('Ruta no encontrada ${settings.name}');
         return MaterialPageRoute(
           builder: (BuildContext context) => AlertPage()
         );
