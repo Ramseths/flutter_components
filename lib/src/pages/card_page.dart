@@ -12,6 +12,8 @@ class CardPage extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         children: <Widget>[
           _cardTipo1(),
+          SizedBox(height: 30.0),
+          _cardTipo2()
         ],
       ),
     );
@@ -39,6 +41,25 @@ class CardPage extends StatelessWidget {
               )
             ],
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _cardTipo2() {
+    return Card(
+      child: Column(
+        children: [
+          FadeInImage(
+            image: NetworkImage('https://wonderfulengineering.com/wp-content/uploads/2014/07/Landscape-wallpapers-21.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            child: Text('No tengo idea'))
         ],
       ),
     );
