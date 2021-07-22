@@ -21,7 +21,9 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
         title: Text('Animated Container'),
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 500),
+          curve: Curves.fastOutSlowIn,
           width: _width,
           height: _heigth,
           decoration: BoxDecoration(
@@ -47,6 +49,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
         random.nextInt(255),
         random.nextInt(255), 
         1);
+      _borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
     });
   }
 }
